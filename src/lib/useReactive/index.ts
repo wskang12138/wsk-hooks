@@ -20,7 +20,7 @@ const observer = <T extends Record<string, any>>(initialVal: T, cb: () => void):
   return proxy;
 }
 
-const index = <T extends Record<string, any>>(initialState: T): T => {
+const useReactive = <T extends Record<string, any>>(initialState: T): T => {
   const ref = useRef(initialState);
   const update = useUpdate();
 
@@ -33,4 +33,4 @@ const index = <T extends Record<string, any>>(initialState: T): T => {
   return state
 };
 
-export default index;
+export default useReactive;

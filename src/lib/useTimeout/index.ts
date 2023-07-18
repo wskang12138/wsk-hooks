@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import useLatest from '../useLatest';
 
-const index = (fn: () => void, delay?: number): void => {
+const useTimeout = (fn: () => void, delay?: number): void => {
 
   const fnRef = useLatest(fn)
 
@@ -20,4 +20,4 @@ const index = (fn: () => void, delay?: number): void => {
 
 };
 
-export default index;
+export default useTimeout;

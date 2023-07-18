@@ -9,8 +9,8 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         { src: 'src/lib', dest: '' },
-        { src: 'src/index.d.ts', dest: '' }  
-      ] 
+        { src: 'src/index.d.ts', dest: '' }
+      ]
     })
   ],
   server: {
@@ -26,6 +26,15 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
+      // 这样 'react' 和 'react-dom' 将不会被打包进你的库
+      external: ['react', 'react-dom'],
+      output: {
+        // 提供全局变量 React = 'react'
+        globals: {
+          react: 'react',
+          'react-dom': 'react-dom',
+        },
+      },
+    }
   }
-}
 })

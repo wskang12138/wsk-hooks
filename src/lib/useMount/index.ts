@@ -1,10 +1,10 @@
 // 使用 useEffect 实现 componentDidMount功能
 import { useEffect } from 'react';
 
-const index = (fn: () => void) => {
+const useMount = (fn: () => void) => {
   useEffect(() => {
     fn?.();
   }, []);
 };
 
-export default index;
+export default useMount;

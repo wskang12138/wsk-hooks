@@ -1,10 +1,10 @@
 // 强制更新
 import { useCallback, useState } from 'react';
 
-const index = () => {
+const useUpdate = () => {
   const [, setState] = useState({});
 
   return useCallback(() => setState({}), []);
 };
 
-export default index;
+export default useUpdate;
