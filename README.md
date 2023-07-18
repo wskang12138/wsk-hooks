@@ -161,3 +161,6 @@ useMount(() => {
 ```js
 const data = usePow([1, 2, 3])
 ```
+
+## 注意
+使用 wsk-hooks 项目中的react版本>=18.0.0 (没留意，自己找了好久的bug)
