@@ -1,7 +1,7 @@
 {
-  "name": "wsk-hooks",
-  "private": true,
-  "version": "1.0.0",
+  "name": "test-wsk",
+  "private": false,
+  "version": "1.0.1",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,9 +10,9 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.d.ts",
-  "module": "dist/index.ts",
-  "typings": "dist/index.td.ts",
+  "main": "dist/index.es.js",
+  "module": "dist/index.umd.js",
+  "typings": "dist/index.d.ts",
   "dependencies": {
     "antd": "^5.7.0",
     "react": "^18.0.0",
@@ -21,6 +21,7 @@
     "vite-plugin-static-copy": "^0.17.0"
   },
   "devDependencies": {
+    "@types/node": "^20.4.2",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@vitejs/plugin-react": "^4.0.3",
@@ -28,6 +29,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wskang12138/admin-template.git"
+    "url": "https://github.com/wskang12138/wsk-hooks.git"
   }
 }

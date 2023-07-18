@@ -71,4 +71,4 @@ const useCountDown = (options?: Options) => {
   return [time, formattedRes] as const
 };
 
-export default useCountDown;
+export default useCountDown

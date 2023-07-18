@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { viteStaticCopy } from 'vite-plugin-static-copy';
+const path = require('path')
 
 export default defineConfig({
   plugins: [
@@ -19,13 +20,12 @@ export default defineConfig({
     cors: true
   },
   build: {
+    lib: {
+      entry: path.resolve(__dirname, 'src/index.d.ts'),
+      name: 'MyReactHooks',
+      fileName: (format) => `index.${format}.js`,
+    },
     rollupOptions: {
-      input: {
-        main: './src/index.ts' 
-      },
-      output:{
-        entryFileNames: 'index.js'
-      }
-    }
   }
+}
 })
